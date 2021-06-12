@@ -1,1 +1,64 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "Times";
+    src: url(assets/times.ttf) format("opentype");
+}
+html,
+body {
+    background-color: #f8f0eb;
+    margin: 0;
+}
+* {
+    transition: all 500ms ease;
+}
+.separator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    height: 118px;
+    .line,
+    .dot {
+        background-color: #a3832a;
+
+        &.line {
+            width: 2px;
+            height: 100px;
+            margin-bottom: 10px;
+            animation: 1500ms rollSeparatorDown ease forwards;
+        }
+        &.dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+    }
+}
+
+@keyframes rollSeparatorDown {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100px;
+    }
+}
+
+@keyframes rollTextUp {
+    from {
+        transform: translateY(100px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes rollImageRight {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100vw;
+    }
+}

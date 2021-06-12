@@ -1,0 +1,134 @@
+#discover-section {
+    width: 100%;
+    .content {
+        background-color: #b3c2af;
+        display: flex;
+        flex-direction: column;
+
+        padding: 0 10%;
+        padding-bottom: 100px;
+        box-sizing: border-box;
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 30px 0;
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+
+            .single-img {
+                max-width: 50%;
+                height: auto;
+            }
+
+            .images-container,
+            .description {
+                width: 50%;
+                padding: 2px;
+                box-sizing: border-box;
+
+                .images {
+                    transform: translateY(-50px);
+                    position: relative;
+                    height: 80vh;
+
+                    display: flex;
+                    overflow: hidden;
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        &:nth-child(odd) {
+                            height: 550px;
+                            transform: translate(-10px, -10px);
+                        }
+                        &:nth-child(even) {
+                            height: 450px;
+                            transform: translate(100px, 150px);
+                        }
+                    }
+                }
+
+                &.description {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .description-title {
+                        font-size: 42px;
+                        font-family: Times, sans-serif;
+                        color: #fff;
+                        text-align: center;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                    }
+                    .description-subtitle {
+                        font-size: 16px;
+                        font-family: "Lato", sans-serif;
+                        color: #fff;
+                    }
+
+                    .btn {
+                        display: flex;
+                        align-items: center;
+
+                        cursor: pointer;
+
+                        color: #4e5b31;
+                        position: relative;
+
+                        margin: 50px 0;
+                        .circle {
+                            position: absolute;
+                            left: -10px;
+                            height: 75px;
+                            width: 75px;
+                            border-radius: 75px;
+                            background-color: #fff;
+                            z-index: 1;
+                        }
+                        i,
+                        .btn-text {
+                            z-index: 3;
+                            font-size: 18px;
+                            &.btn-text {
+                                text-transform: uppercase;
+                                font-style: italic;
+                            }
+                            &.btn-icon {
+                                transform: rotate(45deg);
+                                padding: 0 10px;
+                            }
+                        }
+
+                        &:hover {
+                            .circle {
+                                width: 100%;
+                                padding: 0 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .video-container {
+        display: flex;
+        justify-content: center;
+        video {
+            width: 80%;
+            transform: translateY(-100px);
+        }
+
+        video::-webkit-media-controls-volume-slider {
+            display: none;
+        }
+        video::-webkit-media-controls-mute-button {
+            display: none;
+        }
+    }
+}
