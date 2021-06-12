@@ -8,7 +8,7 @@
         justify-content: center;
         .title,
         .subtitle {
-            animation: 1500ms rollTextUp forwards ease;
+            // animation: 1500ms rollTextUp forwards ease;
             font-size: 48px;
             font-family: "Times", sans-serif;
             text-transform: uppercase;
@@ -19,6 +19,10 @@
             &.title {
                 color: #a3832a;
             }
+
+            //For animation:
+            opacity: 0;
+            transform: translateY(100px);
         }
 
         .separator {
@@ -38,14 +42,15 @@
 
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
 
             div {
                 display: flex;
                 flex-direction: column;
-                width: 50%;
+                width: 48%;
                 height: 100%;
                 justify-content: space-between;
-                align-items: center;
+                align-items: flex-start;
                 &:nth-child(odd) {
                     a {
                         height: 100%;
@@ -58,11 +63,13 @@
                 }
 
                 a {
-                    width: 95%;
                     text-align: center;
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: cover;
+
+                    //For animation:
+                    width: 0%;
 
                     img {
                         max-width: 100%;

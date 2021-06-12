@@ -1,0 +1,59 @@
+#speciality-section {
+    padding-top: 100px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        .speciality {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row-reverse;
+            &:nth-child(even) {
+                flex-direction: row;
+            }
+            .text,
+            .image {
+                width: 48%;
+                font-size: 16px;
+                font-family: "Lato", sans-serif;
+                font-weight: 400;
+                color: #4e5b31;
+                line-height: 1.8;
+                &.text {
+                    .title,
+                    .subtitle {
+                        margin-bottom: 30px;
+                        &.title {
+                            margin-top: 0;
+                            font-size: 48px;
+                            font-family: "Times", sans-serif;
+                            line-height: 1.1;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+                &.image {
+                    .image-container {
+                        width: 0;
+                        height: 650px;
+                        max-height: 100vh;
+                        overflow: hidden;
+                        img {
+                            // width: 0;
+                            max-height: 100%;
+                            // max-width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

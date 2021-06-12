@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AnimationService } from 'src/app/services/animate.service';
 
 @Component({
   selector: 'app-intro',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IntroComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _animateService: AnimationService
+  ) { }
 
   ngOnInit() {
+    this._animateService.animateElements(['title', 'subtitle'], 'rollTextUpClass','intro-section');
+
+    document.addEventListener('scroll', () => {
+      this._animateService.animateElements(['title', 'subtitle'], 'rollTextUpClass','intro-section');
+    });
+
   }
+
 
 }

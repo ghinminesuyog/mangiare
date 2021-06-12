@@ -15,6 +15,9 @@ import { ConnectComponent } from './components/connect/connect.component';
 import { DiscoverComponent } from './components/discover/discover.component';
 import { BookComponent } from './pages/book/book.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { MenuIntroComponent } from './components/menu-intro/menu-intro.component';
+import { FoodComponent } from './components/food/food.component';
+import { SpecialityComponent } from './components/speciality/speciality.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { ContactComponent } from './components/contact/contact.component';
     ConnectComponent,
     DiscoverComponent,
     BookComponent,
-    ContactComponent
+    ContactComponent,
+    MenuIntroComponent,
+    FoodComponent,
+    SpecialityComponent
   ],
   imports: [
     BrowserModule,

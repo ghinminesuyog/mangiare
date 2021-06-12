@@ -1,0 +1,47 @@
+#food-section {
+    width: 100%;
+    .content {
+        min-height: 100vh;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        position: relative;
+        .title {
+            position: sticky;
+            top: 33%;
+            // left: 50%;
+            // transform: translate(-50%, -50%);
+            width: 80%;
+            font-family: "Times", sans-serif;
+            text-align: center;
+            font-size: 48px;
+            line-height: 1.1;
+            text-transform: uppercase;
+            color: #4e5b31;
+        }
+        .image-wrap {
+            display: flex;
+            flex-direction: column;
+            height: 400vh;
+            width: 80%;
+            .image-container {
+                height: 100vh;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                &:nth-child(even) {
+                    flex-direction: row-reverse;
+                }
+                img {
+                    max-width: 33%;
+                    height: fit-content;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+}

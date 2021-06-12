@@ -6,7 +6,7 @@
         justify-content: center;
         .title,
         .subtitle {
-            animation: 1500ms rollTextUp forwards ease;
+            // animation: 1500ms rollTextUp forwards ease;
             font-size: 48px;
             font-family: "Times", sans-serif;
             text-transform: uppercase;
@@ -17,6 +17,10 @@
             &.title {
                 color: #a3832a;
             }
+
+            //For animation purposes:
+            transform: translateY(100px);
+            opacity: 0;
         }
 
         .image-container {
@@ -26,7 +30,9 @@
             overflow: hidden;
             text-align: center;
 
-            animation: 3000ms rollImageRight forwards ease;
+            // animation: 3000ms rollImageRight forwards ease;
+            //For animation:
+            width: 0;
             img {
                 width: 900px;
             }

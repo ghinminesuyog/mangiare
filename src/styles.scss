@@ -36,6 +36,13 @@ body {
     }
 }
 
+.rollTextUpClass {
+    animation: 1500ms rollTextUp forwards ease;
+}
+.rollImageRightClass {
+    animation: 3000ms rollImageRight forwards ease;
+}
+
 @keyframes rollSeparatorDown {
     from {
         height: 0;
@@ -48,9 +55,11 @@ body {
 @keyframes rollTextUp {
     from {
         transform: translateY(100px);
+        opacity: 0;
     }
     to {
         transform: translateY(0);
+        opacity: 1;
     }
 }
 
@@ -59,6 +68,9 @@ body {
         width: 0;
     }
     to {
-        width: 100vw;
+        width: 100%;
     }
+}
+a{
+    text-decoration: none;
 }
