@@ -18,6 +18,10 @@ import { ContactComponent } from './components/contact/contact.component';
 import { MenuIntroComponent } from './components/menu-intro/menu-intro.component';
 import { FoodComponent } from './components/food/food.component';
 import { SpecialityComponent } from './components/speciality/speciality.component';
+import { PlaceIntroComponent } from './components/place-intro/place-intro.component';
+import { PlaceGalleryComponent } from './components/place-gallery/place-gallery.component';
+import { TeamIntroComponent } from './components/team-intro/team-intro.component';
+import { TeamGalleryComponent } from './components/team-gallery/team-gallery.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +40,11 @@ import { SpecialityComponent } from './components/speciality/speciality.componen
     ContactComponent,
     MenuIntroComponent,
     FoodComponent,
-    SpecialityComponent
+    SpecialityComponent,
+    PlaceIntroComponent,
+    PlaceGalleryComponent,
+    TeamIntroComponent,
+    TeamGalleryComponent
   ],
   imports: [
     BrowserModule,

@@ -26,13 +26,17 @@ body {
             width: 2px;
             height: 100px;
             margin-bottom: 10px;
-            animation: 1500ms rollSeparatorDown ease forwards;
         }
         &.dot {
             width: 8px;
             height: 8px;
             border-radius: 50%;
         }
+    }
+}
+.separatorClass {
+    .line {
+        animation: 1500ms rollSeparatorDown ease forwards;
     }
 }
 
@@ -71,6 +75,6 @@ body {
         width: 100%;
     }
 }
-a{
+a {
     text-decoration: none;
 }

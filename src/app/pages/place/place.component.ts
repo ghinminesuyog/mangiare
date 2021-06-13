@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AnimationService } from 'src/app/services/animate.service';
 
 @Component({
   selector: 'app-place',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlaceComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _animateService: AnimationService
+  ) { }
 
   ngOnInit() {
+    this._animateService.animateElements(['separator',], 'separatorClass', 'place-page');
+
+    document.addEventListener('scroll', () => {
+      this._animateService.animateElements(['separator',], 'separatorClass', 'place-page');
+    });
   }
 
 }

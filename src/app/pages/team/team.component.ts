@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AnimationService } from 'src/app/services/animate.service';
 
 @Component({
   selector: 'app-team',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _animateService: AnimationService
+  ) { }
 
   ngOnInit() {
+    this._animateService.animateElements(['separator',], 'separatorClass', 'team-page');
+
+    document.addEventListener('scroll', () => {
+      this._animateService.animateElements(['separator',], 'separatorClass', 'team-page');
+    });
   }
 
 }
